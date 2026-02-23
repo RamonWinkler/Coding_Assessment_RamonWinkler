@@ -1,0 +1,27 @@
+{
+    "id": "FB306030",
+    "path": "/cloud/project/Coding_Assessment_RamonWinkler/question_1_sdtm/01_create_ds_domain.R",
+    "project_path": "Coding_Assessment_RamonWinkler/question_1_sdtm/01_create_ds_domain.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1771866706563.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "tempName": "Untitled1",
+        "cursorPosition": "48,0",
+        "scrollLine": "32"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1771870652,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1771870652,
+    "read_only": false,
+    "read_only_alternatives": []
+}
