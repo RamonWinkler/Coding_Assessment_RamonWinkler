@@ -142,7 +142,7 @@ Produce regulatory-style adverse event outputs using `pharmaverseadam::adae` and
 
 ### Objective
 
-Build a Generative AI assistant that translates free-text clinical questions into structured Pandas dataset queries — without any hard-coded mapping rules.
+Build a Generative AI assistant that translates free-text clinical questions into structured Pandas dataset queries.
 
 ### Architecture
 
