@@ -77,22 +77,17 @@ pip install pandas langchain openai
 
 ### Objective
 
-Create the SDTM Disposition (DS) domain from raw clinical trial data using `{sdtm.oak}`, in accordance with SDTM IG v3.4.
+Create the SDTM Disposition (DS) domain from raw clinical trial data using `{sdtm.oak}`. 
 
 ### Inputs
 
 | Input | Description |
 |-------|-------------|
 | `pharmaverseraw::ds_raw` | Raw disposition data |
-| `study_ct` | Study controlled terminology data frame |
+| `sdtm_ct.csv` | Study controlled terminology data frame |
 
 ### Output
-**Output:** `dsdomain`****
-
-| File | Description |
-|------|-------------|
-| `ds_domain_output.csv` | Final SDTM DS dataset |
-| `ds_log.txt` | Error-free execution log |
+**Output:** `ds_sdtm.csv`****
 
 ---
 
@@ -115,7 +110,7 @@ Create the ADSL (Subject-Level Analysis Dataset) from SDTM source domains using 
 | AE | `pharmaversesdtm::ae` |
 
 ### Outputs
-**Output:** `sdsl`
+**Output:** `adsl.csv`
 
 ---
 
@@ -137,7 +132,7 @@ Produce regulatory-style adverse event outputs using `pharmaverseadam::adae` and
 
 **Output:** `ae_severity_plot.png`
 
-**Output:** `top10_ae_plot.png`
+**Output:** `ae_top10_plot.png`
 
 ---
 
