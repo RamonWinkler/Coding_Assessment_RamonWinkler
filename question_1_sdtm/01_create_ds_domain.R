@@ -8,7 +8,7 @@ library(readr)
 ds_raw <- pharmaverseraw::ds_raw
 
 # Load study terminology
-sdtm_ct <- read_csv("Coding_Assessment_RamonWinkler/question_1_sdtm/sdtm_ct.csv")
+sdtm_ct <- read_csv("question_1_sdtm/sdtm_ct.csv")
 
 # only use the "C66727" that is relevant for the disposition (ds) domain
 ds_terms <- sdtm_ct %>% 
@@ -71,10 +71,10 @@ ds <- ds_raw %>%
   ungroup()
 
 # save dataset
-write.csv(ds,"Coding_Assessment_RamonWinkler/question_1_sdtm/ds_sdtm.csv",row.names = FALSE)
+write.csv(ds,"question_1_sdtm/ds_sdtm.csv",row.names = FALSE)
 
 # Save a log file
-writeLines("DS domain created successfully.","Coding_Assessment_RamonWinkler/question_1_sdtm/ds_log.txt")
+writeLines("DS domain created successfully.","question_1_sdtm/ds_log.txt")
 
 # inspect created file
 head(ds)
