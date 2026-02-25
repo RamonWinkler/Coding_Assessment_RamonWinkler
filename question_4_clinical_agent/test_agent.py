@@ -3,23 +3,20 @@ Simple test script for the Clinical Trial Data Agent
 Runs example queries and validates results
 """
 
-from clinical_data_agent import ClinicalTrialDataAgent
+from question_4_clinical_agent.clinical_data_agent import ClinicalTrialDataAgent
 import sys
 
 
 def run_basic_tests():
     """Run basic test suite with 3 example queries."""
 
-    print("\n" + "="*90)
+    print("\n" + "=" * 90)
     print("CLINICAL DATA AGENT - TEST SUITE")
-    print("="*90)
+    print("=" * 90)
 
     # Initialize agent with mock LLM
     print("\nInitializing agent with adae.csv...")
-    agent = ClinicalTrialDataAgent(
-        data_path='adae.csv',
-        use_mock_llm=True
-    )
+    agent = ClinicalTrialDataAgent(data_path="adae.csv", use_mock_llm=True)
     print("Agent initialized successfully!")
 
     # Define test queries
@@ -27,18 +24,18 @@ def run_basic_tests():
         {
             "question": "Give me the subjects who had Adverse events of Moderate severity",
             "expected_column": "AESEV",
-            "expected_value": "MODERATE"
+            "expected_value": "MODERATE",
         },
         {
             "question": "Which subjects experienced cardiac disorders?",
             "expected_column": "AESOC",
-            "expected_value": "CARDIAC DISORDERS"
+            "expected_value": "CARDIAC DISORDERS",
         },
         {
             "question": "Show me patients with erythema",
             "expected_column": "AETERM",
-            "expected_value": "ERYTHEMA"
-        }
+            "expected_value": "ERYTHEMA",
+        },
     ]
 
     print(f"\nRunning {len(test_cases)} test cases...\n")
@@ -63,15 +60,15 @@ def run_basic_tests():
             "question": question,
             "passed": count > 0,
             "unique_subjects": count,
-            "total_records": len(filtered_df)
+            "total_records": len(filtered_df),
         }
 
         results.append(test_result)
 
     # Print summary
-    print("\n" + "="*90)
+    print("\n" + "=" * 90)
     print("TEST SUMMARY")
-    print("="*90)
+    print("=" * 90)
 
     total_tests = len(results)
     passed_tests = sum(1 for r in results if r["passed"])
@@ -80,7 +77,9 @@ def run_basic_tests():
         status = "PASS" if result["passed"] else "FAIL"
         print(f"\nTest {result['test_number']}: {status}")
         print(f"  Question: {result['question']}")
-        print(f"  Results: {result['unique_subjects']} subjects, {result['total_records']} records")
+        print(
+            f"  Results: {result['unique_subjects']} subjects, {result['total_records']} records"
+        )
 
     print(f"\n{'='*90}")
     print(f"Overall: {passed_tests}/{total_tests} tests passed")
@@ -92,11 +91,11 @@ def run_basic_tests():
 def run_advanced_tests():
     """Run additional test cases for comprehensive validation."""
 
-    print("\n" + "="*90)
+    print("\n" + "=" * 90)
     print("ADVANCED TEST SUITE")
-    print("="*90)
+    print("=" * 90)
 
-    agent = ClinicalTrialDataAgent(data_path='adae.csv', use_mock_llm=True)
+    agent = ClinicalTrialDataAgent(data_path="adae.csv", use_mock_llm=True)
 
     advanced_queries = [
         "Who had mild severity events?",
