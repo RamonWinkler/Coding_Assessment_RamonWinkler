@@ -6,19 +6,7 @@ A Generative AI assistant that translates natural language questions into struct
 
 ---
 
-## 📋 Assessment Requirements - All Met ✅
-
-| Requirement | Delivered | Status |
-|-------------|-----------|--------|
-| **Schema Definition** | Comprehensive schema in `clinical_data_agent.py` | ✅ |
-| **LLM Implementation** | `ClinicalTrialDataAgent` class with `_call_llm()` | ✅ |
-| **Structured JSON Output** | Returns `{"target_column": "...", "filter_value": "..."}` | ✅ |
-| **Execution Function** | `query()` returns (count, subject_ids, dataframe) | ✅ |
-| **Test Script** | `test_agent.py` with 3 required examples | ✅ |
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Setup Virtual Environment
 
@@ -50,7 +38,7 @@ jupyter notebook genai_clinical_assistant.ipynb
 
 ---
 
-## 📂 Files in This Repository
+## Files in This Repository
 
 ```
 genai-clincal-assistant/
@@ -61,12 +49,11 @@ genai-clincal-assistant/
 ├── requirements.txt                   # Python dependencies
 ├── README.md                          # This file
 ├── .gitignore                         # Git ignore rules
-└── venv/                              # Virtual environment (auto-created)
 ```
 
 ---
 
-## 💡 How It Works
+## How It Works
 
 ### Architecture
 
@@ -84,16 +71,14 @@ Results: (136 subjects, ['01-701-1023', '01-701-1047', ...], DataFrame)
 
 ### Key Features
 
-- 🤖 **Natural Language Understanding** - Ask in plain English
-- 🔍 **Intelligent Mapping** - No hard-coded rules, uses LLM
-- 📊 **Two Modes**:
+- **Natural Language Understanding** - Ask in plain English
+- **Intelligent Mapping** - No hard-coded rules, uses LLM
+- **Two Modes**:
   - **Mock Mode** (default) - Rule-based, no API key needed
   - **OpenAI Mode** - Real LLM for complex queries
-- ✅ **Production Ready** - Error handling, type hints, comprehensive tests
-
 ---
 
-## 📊 Dataset Schema
+## Dataset Schema
 
 The assistant works with CDISC SDTM adverse events data (`adae.csv`):
 
@@ -108,7 +93,7 @@ The assistant works with CDISC SDTM adverse events data (`adae.csv`):
 
 ---
 
-## 🧪 The 3 Required Test Cases
+## The 3 Required Test Cases
 
 ### Test Case 1: Moderate Severity
 ```python
@@ -133,7 +118,7 @@ Maps to: AETERM = 'ERYTHEMA'
 
 ---
 
-## 💻 Usage Examples
+## Usage Examples
 
 ### Basic Usage (Mock Mode)
 
@@ -197,7 +182,7 @@ agent.display_results("Which subjects had gastrointestinal issues?")
 
 ---
 
-## 🏗️ Implementation Details
+## Implementation Details
 
 ### ClinicalTrialDataAgent Class
 
@@ -236,7 +221,7 @@ When `use_mock_llm=True`, uses rule-based parsing:
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ```
 pandas>=2.0.0          # Data manipulation
@@ -250,7 +235,7 @@ python-dotenv          # Environment variables (optional)
 
 ---
 
-## 🎯 Running Tests
+## Running Tests
 
 ### Run All Test Cases
 ```bash
@@ -283,17 +268,16 @@ Overall: 3/3 tests passed
 
 ---
 
-## 📓 Jupyter Notebook
+## Jupyter Notebook
 
 The notebook `genai_clinical_assistant.ipynb` provides:
 
-- ✅ Complete interactive demonstration
-- ✅ All 3 test cases with visualizations
-- ✅ Dataset exploration
-- ✅ Architecture explanation
-- ✅ Additional query examples
-- ✅ Parsing demonstration
-- ✅ Professional charts (matplotlib/seaborn)
+- Complete interactive demonstration
+- All 3 test cases with visualizations
+- Dataset exploration
+- Architecture explanation
+- Additional query examples
+- Parsing demonstration
 
 **Run it:**
 ```bash
@@ -303,52 +287,16 @@ jupyter notebook genai_clinical_assistant.ipynb
 
 ---
 
-## 🔧 Implementation Features
+## Implementation Features
 
 The `clinical_data_agent.py` file provides:
 
-- ✅ **Direct OpenAI API integration** - Use GPT-4 for real LLM queries
-- ✅ **Mock Mode** - Rule-based parsing for testing without API key
-- ✅ **Clean, Simple Code** - Easy to understand and modify
-- ✅ **Production Ready** - Comprehensive error handling
-- ✅ **Type Hints** - Full type annotations for clarity
-
+- **Direct OpenAI API integration** - Use GPT-4 for real LLM queries
+- **Mock Mode** - Rule-based parsing for testing without API key
 ---
 
-## 🎓 Assessment Evidence
 
-### Schema Definition ✅
-See `_build_schema_definition()` in agent files:
-- Describes all columns (AESEV, AETERM, AESOC, etc.)
-- Includes possible values
-- Provides keyword mappings
-
-### LLM Implementation ✅
-`ClinicalTrialDataAgent` class:
-- Parses natural language using GPT-4 or mock
-- Returns structured JSON
-- Handles errors gracefully
-
-### Structured JSON Output ✅
-```python
-{"target_column": "AESEV", "filter_value": "MODERATE"}
-```
-
-### Execution Function ✅
-`query()` method:
-- Applies Pandas filter
-- Counts unique subjects (USUBJID)
-- Returns IDs and DataFrame
-
-### Test Script ✅
-`test_agent.py`:
-- 3 required test cases
-- Automated validation
-- Formatted output
-
----
-
-## 🐛 Troubleshooting
+## Troubleshooting
 
 **Import errors?**
 ```bash
@@ -378,7 +326,7 @@ os.environ['OPENAI_API_KEY'] = 'your-key-here'
 
 ---
 
-## 📈 Next Steps
+## Next Steps
 
 1. **Test it**: Run `python test_agent.py`
 2. **Explore**: Open the Jupyter notebook
@@ -388,17 +336,8 @@ os.environ['OPENAI_API_KEY'] = 'your-key-here'
 
 ---
 
-## 📄 License
+## License
 
 MIT License - Feel free to use and modify
 
 ---
-
-## 👤 Author
-
-Created for Python Coding Assessment - Question 4
-Demonstrates GenAI/LLM capabilities for clinical data querying
-
----
-
-**Ready to go!** All files are in place. Start with `python test_agent.py` 🚀
