@@ -30,9 +30,15 @@
 │   └── ae_table_log.txt              # Execution log for table creation
 │   └── ae_visuals_log.txt            # Execution log for visuals creation
 │
-└── question_4_python/
-    ├── clinical_trial_data_agent.py  # GenAI agent class & execution logic
-    └── test_agent.py                 # Test script with 3 example queries
+└── question_4_clinical_agent/
+    ├── adae.csv                           # Adverse events dataset (pharmaversesdtm::ae)
+    ├── clinical_data_agent.py             # Main implementation (with OpenAI & Mock mode)
+    ├── test_agent.py                      # Test script with 3 required examples
+    ├── genai_clinical_assistant.ipynb     # Interactive Jupyter notebook demo
+    ├── requirements.txt                   # Python dependencies
+    ├── README.md                          # This file
+    ├── .gitignore                         # Git ignore rules
+
 ```
 
 ---
@@ -138,30 +144,11 @@ Produce regulatory-style adverse event outputs using `pharmaverseadam::adae` and
 
 ## Question 4 – GenAI Clinical Data Assistant *(Bonus)*
 
-**Folder:** `question_4_python/`
+**Folder:** `question_4_python/` (The folder contains a separate readme file with instructions and details.)
 
 ### Objective
 
 Build a Generative AI assistant that translates free-text clinical questions into structured Pandas dataset queries.
-
-### Architecture
-
-```
-User Question
-    │
-    ▼
-LLM (with schema context + prompt engineering)
-    │
-    ▼
-Structured JSON Output
-  { "target_column": "AESEV", "filter_value": "MODERATE" }
-    │
-    ▼
-Pandas Filter Execution
-    │
-    ▼
-Result: unique subject count + list of USUBJIDs
-```
 
 ---
 
