@@ -92,31 +92,6 @@ The assistant works with CDISC SDTM adverse events data (`adae.csv`):
 
 ---
 
-## The 3 Required Test Cases
-
-### Test Case 1: Moderate Severity
-```python
-Question: "Give me the subjects who had Adverse events of Moderate severity"
-Result: 136 unique subjects, 378 events
-Maps to: AESEV = 'MODERATE'
-```
-
-### Test Case 2: Cardiac Disorders
-```python
-Question: "Which subjects experienced cardiac disorders?"
-Result: 44 unique subjects, 91 events
-Maps to: AESOC = 'CARDIAC DISORDERS'
-```
-
-### Test Case 3: Erythema
-```python
-Question: "Show me patients with erythema"
-Result: 38 unique subjects, 59 events
-Maps to: AETERM = 'ERYTHEMA'
-```
-
----
-
 ## Usage Examples
 
 ### Basic Usage (Mock Mode)
