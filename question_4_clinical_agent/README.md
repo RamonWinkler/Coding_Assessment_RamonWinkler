@@ -2,8 +2,7 @@
 
 **Python Coding Assessment - Question 4**
 
-A Generative AI assistant that translates natural language questions into structured Pandas queries for clinical trial adverse events data, using LLMs to dynamically map user intent to correct dataset variables without hard-coded rules.
-
+A Generative AI assistant that translates natural language questions into structured Pandas queries for clinical trial adverse events data.
 ---
 
 ## Quick Start
